@@ -1,0 +1,14 @@
+#dependencies
+/node_modules
+
+#secrets
+.env
+
+#personal ide settings
+.vscode
+
+#compiled output
+
+#operating system cruft
+.DS_Store
+Thumbs.db
