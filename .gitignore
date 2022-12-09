@@ -3,11 +3,14 @@
 
 #secrets
 .env
+*.local
 
 #personal ide settings
 .vscode
 
 #compiled output
+dist
+dist-ssr
 
 #operating system cruft
 .DS_Store
