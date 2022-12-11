@@ -1,2 +1,33 @@
 # Spoonshare
 # Development docker-compose
+
+services:
+  ui:
+    image:
+    ports:
+    networks:
+    configs:
+    secrets:
+  api:
+    image:
+    volumes:
+    networks:
+
+  db:
+
+volumes:
+  db-data:
+    driver:
+    driver_opts:
+
+configs:
+  httpd-config:
+    external:
+
+secrets:
+  server-certificate:
+    external:
+
+networks:
+  front-tier:
+  back-tier:
