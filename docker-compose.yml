@@ -1,6 +1,6 @@
 # Spoonshare
 # Development docker-compose
-
+version: "3.8"
 services:
   ui:
     image:
@@ -14,10 +14,18 @@ services:
     networks:
 
   db:
+    image: postgres:15.1
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: spoonshare
+      POSTRESS_PASSWORD: password
+    volumes:
+      - pgdata: /var/lib/postgresql/data
 
 volumes:
-  db-data:
-    driver:
+  db:
+    driver: local
     driver_opts:
 
 configs:
