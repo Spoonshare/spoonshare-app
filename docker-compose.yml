@@ -1,41 +1,53 @@
 # Spoonshare
 # Development docker-compose
+# Variables are in .env - follow .env.example to create locally
+
 version: "3.8"
 services:
   ui:
-    image:
+    build:
+      context: ./ui
+    depends_on:
+      - api
+    image: ${PROJECT_NAME}_ui
+    networks:
+      - application
     ports:
-    networks:
-    configs:
-    secrets:
-  api:
-    image:
+      - "5173:5173"
+    stdin_open: true
     volumes:
+      - ./ui:/usr/src/app
+      - /usr/src/app/node_modules
+  api:
+    build:
+      context: ./api
+    depends_on:
+      - db
+    image: ${PROJECT_NAME}_api
     networks:
+      - application
+      - data
+    ports:
+      - "3000:3000"
+    stdin_open: true
+    volumes:
+      - ./api:/app
 
   db:
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTRESS_PASSWORD: ${POSTGRES_PASSWORD}
     image: postgres:15.1
+    networks:
+      - data
     ports:
       - "5432:5432"
-    environment:
-      POSTGRES_USER: spoonshare
-      POSTRESS_PASSWORD: password
     volumes:
-      - pgdata: /var/lib/postgresql/data
-
-volumes:
-  db:
-    driver: local
-    driver_opts:
-
-configs:
-  httpd-config:
-    external:
-
-secrets:
-  server-certificate:
-    external:
+      - pgdata:/var/lib/postgresql/data
 
 networks:
-  front-tier:
-  back-tier:
+  application:
+  data:
+
+volumes:
+  pgdata:
