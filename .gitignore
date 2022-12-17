@@ -15,3 +15,7 @@ dist-ssr
 #operating system cruft
 .DS_Store
 Thumbs.db
+.idea/misc.xml
+.idea/modules.xml
+.idea/spoonshare-app.iml
+.idea/vcs.xml
