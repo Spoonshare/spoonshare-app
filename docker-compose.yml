@@ -3,6 +3,14 @@
 # Variables are in .env - follow .env.example to create locally
 
 version: "3.8"
+
+networks:
+  application:
+  data:
+
+volumes:
+  pgdata:
+
 services:
   ui:
     build:
@@ -34,20 +42,15 @@ services:
       - ./api:/app
 
   db:
+    image: postgres:15.1-bullseye
     environment:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTRESS_PASSWORD: ${POSTGRES_PASSWORD}
-    image: postgres:15.1
     networks:
       - data
     ports:
       - "5432:5432"
+    restart: always
     volumes:
       - pgdata:/var/lib/postgresql/data
-
-networks:
-  application:
-  data:
-
-volumes:
-  pgdata:
+      - ./scripts/support/postgres/db_init.sh:/docker-entrypoint-initdb.d/initializer.sh
