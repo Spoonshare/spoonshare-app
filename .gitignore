@@ -8,7 +8,11 @@
 #personal ide settings
 .vscode
 
-#compiled output
+#api
+api/log
+api/tmp
+
+#ui
 dist
 dist-ssr
 
