@@ -6,6 +6,10 @@ default: &default
 development:
   <<: *default
   database: spoonshare_dev_db
+  username: <%= ENV["POSTGRES_USER"] %>
+  password: <%= ENV["POSTGRES_PASSWORD"] %>
+
+  ]
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -13,6 +17,10 @@ development:
 test:
   <<: *default
   database: spoonshare_test_db
+  username: <%= ENV["POSTGRES_USER"] %>
+  password: <%= ENV["POSTGRES_PASSWORD"] %>
+
+  ]
 
 production:
   <<: *default
