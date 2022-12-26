@@ -31,6 +31,12 @@ services:
       context: ./api
     depends_on:
       - db
+    environment:
+      DB_HOST: db
+      DB_DEV_NAME: ${DB_DEV_NAME}
+      DB_TEST_NAME: ${DB_TEST_NAME}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     image: ${PROJECT_NAME}_api
     networks:
       - application
