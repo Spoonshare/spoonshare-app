@@ -1,6 +1,6 @@
 class HelloWorldsController < ApplicationController
 
   def index
-    return {message: "hello world"}
+    render json: {message: "hello world"}
   end
 end
