@@ -19,7 +19,8 @@ EOSQL
     echo "Created"
 }
 
-create_database_with_creds "spoonshare_dev"
-create_database_with_creds "spoonshare_test"
+#TODO pull from environment
+create_database_with_creds "spoonshare_dev_db"
+create_database_with_creds "spoonshare_test_db"
 
 echo "Done"
