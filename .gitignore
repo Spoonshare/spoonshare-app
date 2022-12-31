@@ -5,8 +5,7 @@ node_modules
 .env
 *.local
 
-#personal ide settings
-.vscode
+#personal ide settings=
 
 #api
 api/log
