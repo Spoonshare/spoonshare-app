@@ -24,3 +24,4 @@ Thumbs.db
 .idea/modules.xml
 .idea/spoonshare-app.iml
 .idea/vcs.xml
+ui/.vscode/settings.json
