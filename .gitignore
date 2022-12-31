@@ -6,6 +6,8 @@ node_modules
 *.local
 
 #personal ide settings=
+.vscode/settings.json
+api/.vscode/settings.json
 
 #api
 api/log
