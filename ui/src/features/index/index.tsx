@@ -1,7 +1,9 @@
+import { DefaultLayout } from '@/shared';
+
 export function Index() {
   return (
-    <div>
+    <DefaultLayout>
       <h1>Index</h1>
-    </div>
+    </DefaultLayout>
   );
 }
