@@ -6,3 +6,4 @@ export { FullLogo } from './full-logo/index';
 export { LogoImage } from './logo-image/index';
 export { Menu } from './menu/index';
 export { RecipeCard } from './recipe-card/index';
+export { DefaultLayout } from './layouts/default';
