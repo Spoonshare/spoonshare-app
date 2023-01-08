@@ -1,7 +1,12 @@
+import { Menu } from '../menu';
+import { Title } from '../title';
+import './index.module.scss';
+
 export function Header() {
   return (
     <header>
-      <h2>Header</h2>
+      <Title />
+      <Menu />
     </header>
   );
 }
