@@ -1,5 +1,5 @@
 import { createBrowserRouter } from 'react-router-dom';
-import { Book, EditRecipe, Index, Login, NewRecipe, Profile, Recipe } from '../features';
+import { Book as RecipeBook, EditRecipe, Index, Login, NewRecipe, Profile, Recipe } from '../features';
 
 export const router = createBrowserRouter([
   {
@@ -7,8 +7,8 @@ export const router = createBrowserRouter([
     element: <Index />,
   },
   {
-    path: 'book',
-    element: <Book />,
+    path: 'recipes',
+    element: <RecipeBook />,
   },
   {
     path: 'login',
@@ -19,15 +19,15 @@ export const router = createBrowserRouter([
     element: <Profile />,
   },
   {
-    path: 'recipe/:id',
+    path: 'recipes/:id',
     element: <Recipe />,
   },
   {
-    path: 'recipe/:id/edit',
+    path: 'recipes/:id/edit',
     element: <EditRecipe />,
   },
   {
-    path: 'recipe/new',
+    path: 'recipes/new',
     element: <NewRecipe />,
   },
 ]);
