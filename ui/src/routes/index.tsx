@@ -1,5 +1,5 @@
 import { createBrowserRouter } from 'react-router-dom';
-import { Book as RecipeBook, EditRecipe, Index, Login, NewRecipe, Profile, Recipe } from '../features';
+import { RecipeBook, EditRecipe, Index, Login, NewRecipe, Profile, Recipe } from '../features';
 
 export const router = createBrowserRouter([
   {

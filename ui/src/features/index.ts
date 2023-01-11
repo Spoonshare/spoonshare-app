@@ -1,4 +1,4 @@
-export { Book } from './book/book';
+export { RecipeBook } from './recipe-book/book-recipe';
 export { EditRecipe } from './edit-recipe/edit-recipe';
 export { Index } from './index/index';
 export { Login } from './login/login';
