@@ -4,6 +4,6 @@ export { Footer } from './footer/index';
 export { Header } from './header/index';
 export { FullLogo } from './full-logo/index';
 export { LogoImage } from './logo-image/index';
-export { Menu } from './menu/index';
-export { RecipeCard } from './recipe-card/index';
+export { Nav as Menu } from './nav/nav';
+export { RecipeCard } from './recipe-card/recipe-card';
 export { DefaultLayout } from './layouts/default';
